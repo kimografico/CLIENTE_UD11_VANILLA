@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla • Kimo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="mensaje">
+        <h1>Cuestionario</h1>
+        <div class="container">
+            <div class="pregunta">
+                <h3>Pregunta</h3>
+                <textarea id="pregunta" rows="3"></textarea>
+                <div class="vof">
+                    <span>
+                        <label for="verdadero">Verdadero</label>
+                        <input type="radio" id="verdadero" name="respuesta" value="verdadero" />
+                    </span>
+                    <span>
+                        <label for="falso">Falso</label>
+                        <input type="radio" id="falso" name="respuesta" value="falso" />
+                    </span>
+                    <span>
+                        <label for="puntos">Puntuación:&emsp;</label>
+                        <input type="text" id="puntos" oninput="validar09(this)"><br>
+                    </span>
+                </div><br>
+                <div class="botonera">
+                    <button id="btnAtras" onclick="atras()">ATRAS</button>&emsp;
+                    <button id="btnGrabar" onclick="grabarPregunta()" disabled>GRABAR</button>
+                </div>
+            </div>
+            <div class="listado">
+                <h3 id="listado">Listado</h3>
+                <div id="cargando">Cargando preguntas...<br><img src="loader.gif"></div>
+                <table id="tablaCompleta">
+                    <thead>
+                        <tr>
+                            <th>Pregunta</th>
+                            <th>Respuesta</th>
+                            <th>Puntuación</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaListado">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="cookies.js"></script>
+    <script src="funciones.js"></script>
+    <script src="preguntas.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla • Kimo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff" rel="stylesheet">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="mensaje" id="mensaje1">
+        <h1>Bienvenido</h1>
+        <p>Pulsa <b>Control + F10</b> o espera 5 segundos</p>
+        <img src="vanilla.png">
+    </div>
+
+    <div class="mensaje" id="mensaje2">
+        <h1>Usuario</h1>
+            <input type="text" name="user" id="usertext"><br>
+            <button id="botonEntrar" onclick="saludo()" disabled>ENTRAR</button><br><br>
+            <p id="aviso">⚠️ El usuario debe ser un email ⚠️</p>
+    </div>
+
+    <div class="mensaje" id="mensaje3">
+        <h2 id="hola">Hola</h2>
+        <p id="fecha">Fecha</p><br>
+        <button id="botonPreguntas" onclick="preguntas()">PREGUNTAS</button><br><br>
+
+    </div>
+    <script src="cookies.js"></script>
+    <script src="funciones.js"></script>
+    <script src="inicio.js"></script>
+</body>
+
+</html>
